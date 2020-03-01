@@ -1,1 +1,1 @@
-"# SecondOrdenNewton" 
+# SecondOrdenNewton
