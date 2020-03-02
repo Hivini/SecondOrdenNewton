@@ -34,6 +34,10 @@ public class SecondOrderNewton {
                     Utils.getXValue(secondDerivativeCoefficients, xi));
             previousXi = xi;
             xi += deltaX;
+            if (Math.abs(Utils.getXValue(coefficients, xi)) < this.tolerance) {
+                break;
+            }
+            System.out.println("Iteration -> " + xi);
         } while (getNormalizedError(xi, previousXi) > this.tolerance && this.maxIter > iterCount);
         return xi;
     }
